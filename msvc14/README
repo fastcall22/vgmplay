@@ -1,0 +1,4 @@
+Experimental contribution for VGMPlay and in_vgm.
+
+This Visual Studio project does not use the zlib library included in this repository.
+Copy *.props.local files to *.local and edit them to point to your zlib installation.
