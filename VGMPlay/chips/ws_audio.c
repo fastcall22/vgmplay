@@ -43,13 +43,13 @@ typedef UINT8	uint8;
 #define SDMACH	chip->ws_ioRam[0x4F]
 #define SDMACTL	chip->ws_ioRam[0x52]
 
-//SoundDMA ‚Ì“]‘—ŠÔŠu
-// ÀÛ‚Ì”’l‚ª•ª‚©‚ç‚È‚¢‚Ì‚ÅA—\‘z‚Å‚·
-// ƒTƒ“ƒvƒŠƒ“ƒOüŠú‚©‚çl‚¦‚Ä‚İ‚ÄˆÈ‰º‚Ì‚æ‚¤‚É‚µ‚½
-// 12KHz = 1.00HBlank = 256cyclesŠÔŠu
-// 16KHz = 0.75HBlank = 192cyclesŠÔŠu
-// 20KHz = 0.60HBlank = 154cyclesŠÔŠu
-// 24KHz = 0.50HBlank = 128cyclesŠÔŠu
+//SoundDMA ï¿½Ì“]ï¿½ï¿½ï¿½ÔŠu
+// ï¿½ï¿½ï¿½Û‚Ìï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Ì‚ÅAï¿½\ï¿½zï¿½Å‚ï¿½
+// ï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Ä‚İ‚ÄˆÈ‰ï¿½ï¿½Ì‚æ‚¤ï¿½É‚ï¿½ï¿½ï¿½
+// 12KHz = 1.00HBlank = 256cyclesï¿½ÔŠu
+// 16KHz = 0.75HBlank = 192cyclesï¿½ÔŠu
+// 20KHz = 0.60HBlank = 154cyclesï¿½ÔŠu
+// 24KHz = 0.50HBlank = 128cyclesï¿½ÔŠu
 const int DMACycles[4] = { 256, 192, 154, 128 };
 
 typedef struct
@@ -182,7 +182,7 @@ void ws_audio_update(UINT8 ChipID, stream_sample_t** buffer, int length)
 			
 			if ((ch==1) && (SNDMOD&0x20))
 			{
-				// Voiceo—Í
+				// Voiceï¿½oï¿½ï¿½
 				w = chip->ws_ioRam[0x89];
 				w -= 0x80;
 				l += chip->PCMVolumeLeft  * w;
@@ -194,7 +194,7 @@ void ws_audio_update(UINT8 ChipID, stream_sample_t** buffer, int length)
 				{
 					//Noise
 
-					//OSWAN‚Ì‹[——”‚Ìˆ—‚Æ“¯“™‚Ì‚Â‚à‚è
+					//OSWANï¿½Ì‹[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½Æ“ï¿½ï¿½ï¿½ï¿½Ì‚Â‚ï¿½ï¿½
 #define BIT(n) (1<<n)
 					const unsigned long noise_mask[8] =
 					{
@@ -260,9 +260,9 @@ void ws_audio_update(UINT8 ChipID, stream_sample_t** buffer, int length)
 					chip->ws_audio[ch].pos &= 0x1f;
 					w = chip->ws_internalRam[(chip->ws_audio[ch].wave&0xFFF0) + (chip->ws_audio[ch].pos>>1)];
 					if ((chip->ws_audio[ch].pos&1) == 0)
-						w = (w<<4)&0xf0;	//‰ºˆÊƒjƒuƒ‹
+						w = (w<<4)&0xf0;	//ï¿½ï¿½ï¿½Êƒjï¿½uï¿½ï¿½
 					else
-						w = w&0xf0;			//ãˆÊƒjƒuƒ‹
+						w = w&0xf0;			//ï¿½ï¿½Êƒjï¿½uï¿½ï¿½
 					w -= 0x80;
 					l += chip->ws_audio[ch].lvol * w;
 					r += chip->ws_audio[ch].rvol * w;
@@ -296,11 +296,11 @@ void ws_audio_port_write(UINT8 ChipID, BYTE port, BYTE value)
 
 	switch (port)
 	{
-	// 0x80-0x87‚Ìü”g”ƒŒƒWƒXƒ^‚É‚Â‚¢‚Ä
-	// - ƒƒbƒNƒ}ƒ“&ƒtƒHƒ‹ƒe‚Ì0x0f‚Ì‹È‚Å‚ÍAü”g”=0xFFFF ‚Ì‰¹‚ª•s—v
-	// - ƒfƒWƒ‚ƒ“ƒfƒB[ƒvƒƒWƒFƒNƒg‚Ì0x0d‚Ì‹È‚ÌƒmƒCƒY‚Í ü”g”=0x07FF ‚Å‰¹‚ğo‚·
-	// ¨‚Â‚Ü‚èA0xFFFF ‚Ì‚¾‚¯‰¹‚ğo‚³‚È‚¢‚Á‚Ä‚±‚Æ‚¾‚ë‚¤‚©B
-	//   ‚Å‚àA0x07FF ‚Ì‚à‰¹‚ğo‚³‚È‚¢‚¯‚ÇAƒmƒCƒY‚¾‚¯‰¹‚ğo‚·‚Ì‚©‚àB
+	// 0x80-0x87ï¿½Ìï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Xï¿½^ï¿½É‚Â‚ï¿½ï¿½ï¿½
+	// - ï¿½ï¿½ï¿½bï¿½Nï¿½}ï¿½ï¿½&ï¿½tï¿½Hï¿½ï¿½ï¿½eï¿½ï¿½0x0fï¿½Ì‹È‚Å‚ÍAï¿½ï¿½ï¿½gï¿½ï¿½=0xFFFF ï¿½Ì‰ï¿½ï¿½ï¿½ï¿½sï¿½v
+	// - ï¿½fï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½fï¿½Bï¿½[ï¿½vï¿½ï¿½ï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½0x0dï¿½Ì‹È‚Ìƒmï¿½Cï¿½Yï¿½ï¿½ ï¿½ï¿½ï¿½gï¿½ï¿½=0x07FF ï¿½Å‰ï¿½ï¿½ï¿½oï¿½ï¿½
+	// ï¿½ï¿½ï¿½Â‚Ü‚ï¿½A0xFFFF ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Æ‚ï¿½ï¿½ë‚¤ï¿½ï¿½ï¿½B
+	//   ï¿½Å‚ï¿½A0x07FF ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ÇAï¿½mï¿½Cï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½B
 	case 0x80:
 	case 0x81:	i=(((unsigned int)chip->ws_ioRam[0x81])<<8)+((unsigned int)chip->ws_ioRam[0x80]);
 				if (i == 0xffff)
@@ -354,19 +354,19 @@ void ws_audio_port_write(UINT8 ChipID, BYTE port, BYTE value)
 				chip->SweepStep = (signed char)value;
 				break;
 	case 0x8D:
-				//Sweep‚ÌŠÔŠu‚Í 1/375[s] = 2.666..[ms]
-				//CPU Clock‚ÅŒ¾‚¤‚Æ 3072000/375 = 8192[cycles]
-				//‚±‚±‚Ìİ’è’l‚ğn‚Æ‚·‚é‚ÆA8192[cycles]*(n+1) ŠÔŠu‚ÅSweep‚·‚é‚±‚Æ‚É‚È‚é
+				//Sweepï¿½ÌŠÔŠuï¿½ï¿½ 1/375[s] = 2.666..[ms]
+				//CPU Clockï¿½ÅŒï¿½ï¿½ï¿½ï¿½ï¿½ 3072000/375 = 8192[cycles]
+				//ï¿½ï¿½ï¿½ï¿½ï¿½Ìİ’ï¿½lï¿½ï¿½nï¿½Æ‚ï¿½ï¿½ï¿½ÆA8192[cycles]*(n+1) ï¿½ÔŠuï¿½ï¿½Sweepï¿½ï¿½ï¿½é‚±ï¿½Æ‚É‚È‚ï¿½
 				//
-				//‚±‚ê‚ğ HBlank (256cycles) ‚ÌŠÔŠu‚ÅŒ¾‚¤‚ÆA
-				//@8192/256 = 32
-				//‚È‚Ì‚ÅA32[HBlank]*(n+1) ŠÔŠu‚Æ‚È‚é
+				//ï¿½ï¿½ï¿½ï¿½ï¿½ HBlank (256cycles) ï¿½ÌŠÔŠuï¿½ÅŒï¿½ï¿½ï¿½ï¿½ÆA
+				//ï¿½@8192/256 = 32
+				//ï¿½È‚Ì‚ÅA32[HBlank]*(n+1) ï¿½ÔŠuï¿½Æ‚È‚ï¿½
 				chip->SweepTime = (((unsigned int)value)+1)<<5;
 				chip->SweepCount = chip->SweepTime;
 				break;
 	case 0x8E:
 				chip->NoiseType = value&7;
-				if (value&8) chip->NoiseRng = 1;	//ƒmƒCƒYƒJƒEƒ“ƒ^[ƒŠƒZƒbƒg
+				if (value&8) chip->NoiseRng = 1;	//ï¿½mï¿½Cï¿½Yï¿½Jï¿½Eï¿½ï¿½ï¿½^ï¿½[ï¿½ï¿½ï¿½Zï¿½bï¿½g
 				break;
 	case 0x8F:
 				//WaveAdrs = (unsigned int)value<<6;
@@ -378,8 +378,8 @@ void ws_audio_port_write(UINT8 ChipID, BYTE port, BYTE value)
 	case 0x90:
 				break;
 	case 0x91:
-				//‚±‚±‚Å‚Ìƒ{ƒŠƒ…[ƒ€’²®‚ÍA“à‘ Speaker‚É‘Î‚µ‚Ä‚Ì’²®‚¾‚¯‚ç‚µ‚¢‚Ì‚ÅA
-				//ƒwƒbƒhƒtƒHƒ“Ú‘±‚³‚ê‚Ä‚¢‚é‚Æ”F¯‚³‚¹‚ê‚Î–â‘è–³‚¢‚ç‚µ‚¢B
+				//ï¿½ï¿½ï¿½ï¿½ï¿½Å‚Ìƒ{ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍAï¿½ï¿½ï¿½Speakerï¿½É‘Î‚ï¿½ï¿½Ä‚Ì’ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç‚µï¿½ï¿½ï¿½Ì‚ÅA
+				//ï¿½wï¿½bï¿½hï¿½tï¿½Hï¿½ï¿½ï¿½Ú‘ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Æ”Fï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î–ï¿½è–³ï¿½ï¿½ï¿½ç‚µï¿½ï¿½ï¿½B
 				chip->ws_ioRam[port] |= 0x80;
 				break;
 	case 0x92:
@@ -402,7 +402,7 @@ BYTE ws_audio_port_read(UINT8 ChipID, BYTE port)
 	return (chip->ws_ioRam[port]);
 }
 
-// HBlankŠÔŠu‚ÅŒÄ‚Î‚ê‚é
+// HBlankï¿½ÔŠuï¿½ÅŒÄ‚Î‚ï¿½ï¿½
 // Note: Must be called every 256 cycles (3072000 Hz clock), i.e. at 12000 Hz
 static void ws_audio_process(wsa_state* chip)
 {

@@ -391,17 +391,17 @@ int main(int argc, char* argv[])
 		// Debug and Release were tested by dropping a file on it and via Visual Studio.
 		//
 		// Input CP 850, Output CP 850
-		//	Debug build:	Dynamite D³x
-		//	Release build:	Dynamite Düx
+		//	Debug build:	Dynamite Dï¿½x
+		//	Release build:	Dynamite Dï¿½x
 		// Input CP 1252, Output CP 850
-		//	Debug build:	Dynamite D³x
-		//	Release build:	Dynamite D³x
+		//	Debug build:	Dynamite Dï¿½x
+		//	Release build:	Dynamite Dï¿½x
 		// Input CP 850, Output CP 1252
-		//	Debug build:	Dynamite D³x [tag display wrong]
-		//	Release build:	Dynamite Düx [tag display wrong]
+		//	Debug build:	Dynamite Dï¿½x [tag display wrong]
+		//	Release build:	Dynamite Dï¿½x [tag display wrong]
 		// Input CP 1252, Output CP 1252
-		//	Debug build:	Dynamite D³x [tag display wrong]
-		//	Release build:	Dynamite D³x [tag display wrong]
+		//	Debug build:	Dynamite Dï¿½x [tag display wrong]
+		//	Release build:	Dynamite Dï¿½x [tag display wrong]
 #else
 		StrPtr = fgets(VgmFileName, MAX_PATH, stdin);
 		if (StrPtr == NULL)

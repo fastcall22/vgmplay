@@ -4,7 +4,7 @@
 /*                        Version 2.0, 12th January 2002                      */
 /*                          http://www.beyondlogic.org                        */
 /*                                                                            */
-/* Copyright © 2002 Craig Peacock. Craig.Peacock@beyondlogic.org              */
+/* Copyright ï¿½ 2002 Craig Peacock. Craig.Peacock@beyondlogic.org              */
 /* Any publication or distribution of this code in source form is prohibited  */
 /* without prior written permission of the copyright holder. This source code */
 /* is provided "as is", without any guarantee made as to its suitability or   */
