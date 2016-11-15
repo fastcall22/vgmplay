@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\chips">
+      <UniqueIdentifier>{7927db56-e276-434a-9810-4e14b7bd1e42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\chips">
+      <UniqueIdentifier>{14f16841-c6d4-48fe-9c4e-1c69002cb425}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\VGMPlay\ChipMapper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\pt_ioctl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\Stream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\VGMPlay_AddFmts.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ymdeltat.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ymf262.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ymf271.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ymf278b.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ymz280b.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\262intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\2151intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\2203intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\2413intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\2608intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\2610intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\2612intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\3526intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\3812intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\8950intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\adlibemu_opl2.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\adlibemu_opl3.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ay_intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ay8910.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ay8910_opl.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\c140.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\c352.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\c6280.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\c6280intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\dac_control.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\emu2149.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\emu2413.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\es5503.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\es5506.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\fm.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\fm2612.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\fmopl.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\gb.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\iremga20.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\k051649.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\k053260.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\k054539.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\multipcm.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\nes_apu.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\nes_intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\np_nes_apu.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\np_nes_dmc.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\np_nes_fds.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\okim6258.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\okim6295.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\Ootake_PSG.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\panning.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\pokey.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\pwm.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\qsound.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\rf5c68.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\saa1099.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\scd_pcm.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\scsp.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\scspdsp.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\segapcm.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\sn764intf.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\sn76489.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\sn76496.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\sn76496_opl.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\upd7759.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\vsu.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ws_audio.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\x1_010.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ym2151.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ym2413.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ym2413_opl.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ym2413hd.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\chips\ym2612.c">
+      <Filter>Source Files\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\VGMPlay\VGMPlay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\VGMPlay\ChipMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\PortTalk_IOCTL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\stdbool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\Stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\VGMFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\VGMPlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\VGMPlay_Intf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ym2612.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ymdeltat.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ymf262.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ymf271.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ymf278b.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ymz280b.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\262intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\281btone.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\2151intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\2203intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\2413intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\2413tone.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\2608intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\2610intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\2612intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\3526intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\3812intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\8950intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\adlibemu.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ay_intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ay8910.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\c140.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\c352.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\c6280.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\c6280intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ChipIncl.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\dac_control.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\emu2149.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\emu2413.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\emutypes.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\es5503.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\es5506.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\fm.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\fmopl.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\gb.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\iremga20.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\k051649.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\k053260.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\k054539.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\mamedef.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\multipcm.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\nes_apu.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\nes_defs.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\nes_intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\np_nes_apu.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\np_nes_dmc.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\np_nes_fds.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\okim6258.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\okim6295.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\Ootake_PSG.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\opl.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\panning.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\pokey.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\pwm.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\qsound.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\rf5c68.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\saa1099.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\scd_pcm.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\scsp.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\scspdsp.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\segapcm.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\sn764intf.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\sn76489.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\sn76496.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\upd7759.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\vrc7tone.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\vsu.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ws_audio.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ws_initialIo.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\x1_010.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ym2151.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ym2413.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\VGMPlay\chips\ym2413hd.h">
+      <Filter>Header Files\chips</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

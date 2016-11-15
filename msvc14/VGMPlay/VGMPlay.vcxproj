@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7D877B88-B579-4449-A986-00DABEE7993C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VGMPlay</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\zlib-master_debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\zlib-master_release.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)int\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)int\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;_USRDLL;VGMPLAY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>zlibstaticd.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;_USRDLL;VGMPLAY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>zlibstatic.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\VGMPlay\ChipMapper.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\2151intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\2203intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\2413intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\2608intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\2610intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\2612intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\262intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\3526intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\3812intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\8950intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\adlibemu_opl2.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\adlibemu_opl3.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ay8910.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ay8910_opl.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ay_intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\c140.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\c352.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\c6280.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\c6280intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\dac_control.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\emu2149.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\emu2413.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\es5503.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\es5506.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\fm.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\fm2612.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\fmopl.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\gb.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\iremga20.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\k051649.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\k053260.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\k054539.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\multipcm.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\nes_apu.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\nes_intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\np_nes_apu.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\np_nes_dmc.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\np_nes_fds.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\okim6258.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\okim6295.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\Ootake_PSG.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\panning.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\pokey.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\pwm.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\qsound.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\rf5c68.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\saa1099.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\scd_pcm.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\scsp.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\scspdsp.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\segapcm.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\sn76489.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\sn76496.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\sn76496_opl.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\sn764intf.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\upd7759.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\vsu.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ws_audio.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\x1_010.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ym2151.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ym2413.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ym2413hd.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ym2413_opl.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ym2612.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ymdeltat.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ymf262.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ymf271.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ymf278b.c" />
+    <ClCompile Include="..\..\VGMPlay\chips\ymz280b.c" />
+    <ClCompile Include="..\..\VGMPlay\pt_ioctl.c" />
+    <ClCompile Include="..\..\VGMPlay\Stream.c" />
+    <ClCompile Include="..\..\VGMPlay\VGMPlay.c" />
+    <ClCompile Include="..\..\VGMPlay\VGMPlay_AddFmts.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\VGMPlay\ChipMapper.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\2151intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\2203intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\2413intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\2413tone.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\2608intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\2610intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\2612intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\262intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\281btone.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\3526intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\3812intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\8950intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\adlibemu.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ay8910.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ay_intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\c140.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\c352.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\c6280.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\c6280intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ChipIncl.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\dac_control.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\emu2149.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\emu2413.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\emutypes.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\es5503.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\es5506.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\fm.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\fmopl.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\gb.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\iremga20.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\k051649.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\k053260.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\k054539.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\mamedef.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\multipcm.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\nes_apu.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\nes_defs.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\nes_intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\np_nes_apu.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\np_nes_dmc.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\np_nes_fds.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\okim6258.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\okim6295.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\Ootake_PSG.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\opl.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\panning.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\pokey.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\pwm.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\qsound.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\rf5c68.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\saa1099.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\scd_pcm.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\scsp.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\scspdsp.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\segapcm.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\sn76489.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\sn76496.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\sn764intf.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\upd7759.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\vrc7tone.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\vsu.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ws_audio.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ws_initialIo.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\x1_010.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ym2151.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ym2413.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ym2413hd.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ym2612.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ymdeltat.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ymf262.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ymf271.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ymf278b.h" />
+    <ClInclude Include="..\..\VGMPlay\chips\ymz280b.h" />
+    <ClInclude Include="..\..\VGMPlay\PortTalk_IOCTL.h" />
+    <ClInclude Include="..\..\VGMPlay\stdbool.h" />
+    <ClInclude Include="..\..\VGMPlay\Stream.h" />
+    <ClInclude Include="..\..\VGMPlay\VGMFile.h" />
+    <ClInclude Include="..\..\VGMPlay\VGMPlay.h" />
+    <ClInclude Include="..\..\VGMPlay\VGMPlay_Intf.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
