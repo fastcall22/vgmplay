@@ -212,7 +212,7 @@ static void SendFrequency(sn76496_state_opl* R, UINT8 Channel)
 	double FreqVal;
 	signed short int FNum;
 	signed char BlockVal;
-	sn76496_state_opl* R2;
+	sn76496_state_opl* R2 = NULL;
 	unsigned char ChnB;
 	
 	Channel &= 0x03;

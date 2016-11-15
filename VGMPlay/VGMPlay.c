@@ -635,7 +635,7 @@ char* FindFile(const char* FileName)
 	UINT32 NameLen;
 	UINT32 PathLen;
 	UINT32 FullLen;
-	FILE* hFile;
+	FILE* hFile = NULL;
 	
 	NameLen = strlen(FileName);
 	//printf("Find File: %s\n", FileName);
