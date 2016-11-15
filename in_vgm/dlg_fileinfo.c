@@ -997,13 +997,13 @@ bool GetExtendedFileInfoW(const wchar_t* FileName, const char* MetaType, wchar_t
 	*RetBuffer = L'\0';
 	
 	// General Meta Tags
-	if (! stricmp(MetaType, "type"))
+	if (! _stricmp(MetaType, "type"))
 	{
 		// Data Type (Audio/Video/...)
 		_snwprintf(RetBuffer, RetBufLen, L"%d", Options.MLFileType);
 		return true;
 	}
-	else if (! stricmp(MetaType, "family"))	// Winamp 5.5+ only
+	else if (! _stricmp(MetaType, "family"))	// Winamp 5.5+ only
 	{
 		const wchar_t* FileExt;
 		
@@ -1011,7 +1011,7 @@ bool GetExtendedFileInfoW(const wchar_t* FileName, const char* MetaType, wchar_t
 		if (FileExt != NULL)
 		{
 			FileExt ++;
-			if (! wcsicmp(FileExt, L"vgm") || ! wcsicmp(FileExt, L"vgz"))
+			if (! _wcsicmp(FileExt, L"vgm") || ! _wcsicmp(FileExt, L"vgz"))
 			{
 				wcsncpy(RetBuffer, L"Video Game Music File", RetBufLen);
 				return true;
@@ -1019,7 +1019,7 @@ bool GetExtendedFileInfoW(const wchar_t* FileName, const char* MetaType, wchar_t
 		}
 		return false;
 	}
-	else if (! stricmp(MetaType, "track"))
+	else if (! _stricmp(MetaType, "track"))
 	{
 		return false;
 		/*// Track Number
@@ -1054,19 +1054,19 @@ bool GetExtendedFileInfoW(const wchar_t* FileName, const char* MetaType, wchar_t
 	if (! UseInfo->FileSize)
 		return false;
 	
-	if (! stricmp(MetaType, "artist"))
+	if (! _stricmp(MetaType, "artist"))
 		TagIdx = METATAG_AUTHOR;
-	else if (! stricmp(MetaType, "length"))
+	else if (! _stricmp(MetaType, "length"))
 		TagIdx = METATAG_LENGTH;
-	else if (! stricmp(MetaType, "title"))
+	else if (! _stricmp(MetaType, "title"))
 		TagIdx = METATAG_TITLE;
-	else if (! stricmp(MetaType, "album"))
+	else if (! _stricmp(MetaType, "album"))
 		TagIdx = METATAG_ALBUM;	// return Game Name
-	else if (! stricmp(MetaType, "comment"))
+	else if (! _stricmp(MetaType, "comment"))
 		TagIdx = METATAG_COMMENT;
-	else if (! stricmp(MetaType, "year") || ! stricmp(MetaType, "date"))
+	else if (! _stricmp(MetaType, "year") || ! _stricmp(MetaType, "date"))
 		TagIdx = METATAG_YEAR;
-	else if (! stricmp(MetaType, "genre"))
+	else if (! _stricmp(MetaType, "genre"))
 		TagIdx = METATAG_GENRE;	// return System (?)
 	else
 	{

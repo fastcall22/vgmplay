@@ -35,9 +35,9 @@ void ReadIni_Boolean(const char* Section, const char* Key, bool* Value)
 	if (! strcmp(TempStr, ""))
 		return;
 	
-	if (! stricmp(TempStr, "True"))
+	if (! _stricmp(TempStr, "True"))
 		*Value = true;
-	else if (! stricmp(TempStr, "False"))
+	else if (! _stricmp(TempStr, "False"))
 		*Value = false;
 	else
 		*Value = strtol(TempStr, NULL, 0) ? true : false;
