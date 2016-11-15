@@ -541,10 +541,10 @@ void SaveConfigurationFile(void)
 		for (CurChip = 0x00; CurChip < CHIP_COUNT; CurChip ++, TempCOpt ++)
 		{
 			ChipName = GetChipName(CurChip);
-			sprintf(TempStr, "%s #%u All", ChipName, CurCSet, 1);
+			sprintf(TempStr, "%s #%u All", ChipName, CurCSet);
 			WriteIni_Boolean("Muting",	TempStr,	TempCOpt->Disabled);
 			
-			sprintf(TempStr, "%s #%u", ChipName, CurCSet, 1);
+			sprintf(TempStr, "%s #%u", ChipName, CurCSet);
 			WriteIni_XInteger("Muting",	TempStr,	TempCOpt->ChnMute1);
 			if (CurChip == 0x07 || CurChip == 0x08 || CurChip == 0x0D)
 			{
