@@ -27,6 +27,7 @@ Revisions:
 *********************************************************/
 
 //#include "emu.h"
+#include <stdio.h>	// for printf
 #include <stdlib.h>
 #include <string.h>	// for memset
 #include <stddef.h>	// for NULL

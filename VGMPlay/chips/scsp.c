@@ -30,6 +30,7 @@
 //#include "emu.h"
 #include "mamedef.h"
 #include <math.h>	// for pow() in scsplfo.c
+#include <stdio.h>	// for printf
 #include <stdlib.h>
 #include <string.h>	// for memset
 #include "scsp.h"

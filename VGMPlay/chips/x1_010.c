@@ -52,6 +52,7 @@ Registers:
 #include <stdlib.h>
 #include <stddef.h>	// for NULL
 #include <string.h>	// for memset
+#include <stdio.h>	// for printf
 #include "mamedef.h"
 #include "x1_010.h"
 

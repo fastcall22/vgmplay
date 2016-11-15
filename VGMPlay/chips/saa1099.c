@@ -65,6 +65,7 @@
 
 //#include "emu.h"
 #include "mamedef.h"
+#include <stdio.h>	// for printf
 #include <string.h>	// for memset
 #include "saa1099.h"
 

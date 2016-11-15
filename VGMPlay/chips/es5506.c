@@ -81,6 +81,7 @@ Ensoniq OTIS - ES5505                                            Ensoniq OTTO - 
 ***********************************************************************************************/
 
 //#include "emu.h"
+#include <stdio.h>	// for printf
 #include <stdlib.h>
 #include <string.h>	// for memset
 #include "mamedef.h"

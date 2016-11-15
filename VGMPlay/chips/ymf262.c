@@ -58,6 +58,7 @@ differences between OPL2 and OPL3 shown in datasheets:
 #include <stdlib.h>
 #include <string.h>	// for memset
 #include <stddef.h>	// for NULL
+#include <stdio.h>  // for printf
 //#include "sndintrf.h"
 #include "ymf262.h"
 
